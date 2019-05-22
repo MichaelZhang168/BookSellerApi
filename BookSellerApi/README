@@ -1,0 +1,13 @@
+Reason and technology I've choosen to implement the system:
+   1. C++ instead of C# as it has wider platform use.
+   2. sqlite3 library to implement the database as it create a SQLite database.
+   3. cpprestsdk library as that allow the system to be developed as a RESTful api.
+
+The whole system contain 3 components:
+   1. BookSellerDatabase: Responsible for all database activities only.
+   2. BookSellerServer: Uses the BookSellerDatabase for access to the SQLite database and the http_listener to interface to the outside world. In general, it only responsible for processing user request(s).
+   3. BookSellerServerApi: A wrapper to hide all implementation details. This allow us to choose what to expose to other developers.
+
+Due to time contraint I wasn't able to complete the system for the following reasons:
+   1. Started off with TDD approach as it provide better code quality. Ended up not using TDD, although not desire, as time is running out. In future, I would still stay with TDD as I prefer quality over quantity.
+   2. Wasted almost 2 hours debugging why Test Discovery not starting. Ended up re-installing Visual Studio 2019 community.
